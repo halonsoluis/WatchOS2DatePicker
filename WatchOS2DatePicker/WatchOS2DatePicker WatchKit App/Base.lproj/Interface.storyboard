@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchOS2DatePicker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Choose Date" id="L3A-zh-Dpn">
+                            <connections>
+                                <action selector="showDateOfBirthSelection" destination="AgC-eL-Hgc" id="Cnt-YW-Ns1"/>
+                            </connections>
+                        </button>
+                        <label width="1" height="0.29999999999999999" alignment="center" verticalAlignment="center" text="zxcf" textAlignment="center" id="GAD-wn-W0x"/>
+                    </items>
+                    <connections>
+                        <outlet property="dateLabel" destination="GAD-wn-W0x" id="OsZ-U7-GdR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-139" y="320"/>
+        </scene>
+        <!--DateOfBirthSelectionController-->
+        <scene sceneID="rDi-rD-kge">
+            <objects>
+                <controller identifier="DateOfBirthSelectionController" hidesWhenLoading="NO" id="wG1-27-LKf" customClass="DateOfBirthSelectionController" customModule="WatchOS2DatePicker_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" spacing="10" id="pIH-KF-ofA">
+                            <items>
+                                <label width="0.90000000000000002" alignment="center" text="Chose your birthDate" textAlignment="center" numberOfLines="0" id="7jo-9h-Qzw"/>
+                                <group width="1" height="0.40999999999999998" alignment="left" id="OBi-Qn-xYc" userLabel="DatePicker">
+                                    <items>
+                                        <picker width="0.40000000000000002" height="1" alignment="left" id="8xw-4l-bQ6" userLabel="Month">
+                                            <connections>
+                                                <action selector="pickerSelectedMonthItemChanged:" destination="wG1-27-LKf" id="oOk-c2-Tlf"/>
+                                            </connections>
+                                        </picker>
+                                        <picker width="0.23999999999999999" height="1" alignment="left" id="rug-l4-hvc" userLabel="Day">
+                                            <connections>
+                                                <action selector="pickerSelectedDayItemChanged:" destination="wG1-27-LKf" id="lz3-TH-kZe"/>
+                                            </connections>
+                                        </picker>
+                                        <picker width="0.35999999999999999" height="1" alignment="left" id="fea-UC-LRP" userLabel="Year">
+                                            <connections>
+                                                <action selector="pickerSelectedYearItemChanged:" destination="wG1-27-LKf" id="eQY-cu-teg"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                </group>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Done" id="L8H-Bu-nAQ">
+                                    <connections>
+                                        <action selector="doneTapped" destination="wG1-27-LKf" id="krL-jy-F3x"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="3" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="dayPicker" destination="rug-l4-hvc" id="CoQ-Hh-rnA"/>
+                        <outlet property="monthPicker" destination="8xw-4l-bQ6" id="XK1-ge-tjB"/>
+                        <outlet property="yearPicker" destination="fea-UC-LRP" id="BcL-04-gP5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="141" y="320"/>
+        </scene>
+    </scenes>
+</document>
