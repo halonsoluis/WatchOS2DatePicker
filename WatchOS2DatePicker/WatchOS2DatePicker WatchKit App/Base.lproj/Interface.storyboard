@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -31,20 +31,23 @@
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="10" id="pIH-KF-ofA">
                             <items>
-                                <label width="0.90000000000000002" alignment="center" text="Chose your birthDate" textAlignment="center" numberOfLines="0" id="7jo-9h-Qzw"/>
+                                <label width="0.90000000000000002" alignment="center" text="Chose your date of birth" textAlignment="center" numberOfLines="0" id="7jo-9h-Qzw"/>
                                 <group width="1" height="0.40999999999999998" alignment="left" id="OBi-Qn-xYc" userLabel="DatePicker">
                                     <items>
                                         <picker width="0.40000000000000002" height="1" alignment="left" id="8xw-4l-bQ6" userLabel="Month">
+                                            <variation key="device=watch38mm" width="0.35999999999999999"/>
                                             <connections>
                                                 <action selector="pickerSelectedMonthItemChanged:" destination="wG1-27-LKf" id="oOk-c2-Tlf"/>
                                             </connections>
                                         </picker>
                                         <picker width="0.23999999999999999" height="1" alignment="left" id="rug-l4-hvc" userLabel="Day">
+                                            <variation key="device=watch38mm" width="0.26000000000000001"/>
                                             <connections>
                                                 <action selector="pickerSelectedDayItemChanged:" destination="wG1-27-LKf" id="lz3-TH-kZe"/>
                                             </connections>
                                         </picker>
                                         <picker width="0.35999999999999999" height="1" alignment="left" id="fea-UC-LRP" userLabel="Year">
+                                            <variation key="device=watch38mm" width="0.40999999999999998"/>
                                             <connections>
                                                 <action selector="pickerSelectedYearItemChanged:" destination="wG1-27-LKf" id="eQY-cu-teg"/>
                                             </connections>
